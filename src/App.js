@@ -9,7 +9,7 @@ class App extends React.Component {
 
 
     componentDidMount() {
-        fetch("http://api.open-notify.org/astros.json")
+        fetch(this.state.url)
         .then(response => response.json())
         .then(astros => {
             this.setState(prevState => {
